@@ -22,4 +22,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapGet("/self", () => Results.Ok("UP"));
+app.MapGet("/ready", () => Results.Ok("READY"));
+
 app.Run();
