@@ -50,7 +50,7 @@ namespace Gerenciador.Credito.Api.Extensions
 
         public static void AddMessagingConfiguration(this WebApplicationBuilder builder)
         {
-            builder.Services.AddSingleton<IMessagePublisher, KafkaPublisher>();
+            //builder.Services.AddSingleton<IMessagePublisher, KafkaPublisher>();
         }
     }
 }
