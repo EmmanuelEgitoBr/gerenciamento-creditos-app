@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-Gerenciador.Credito.Worker-b04b1f68-3cd0-4891-a138-85983be15ebd</UserSecretsId>
+    <UserSecretsId>dotnet-Gerenciador.Credito.Worker-91109a11-2a64-4194-a66f-77424ccba4b1</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
