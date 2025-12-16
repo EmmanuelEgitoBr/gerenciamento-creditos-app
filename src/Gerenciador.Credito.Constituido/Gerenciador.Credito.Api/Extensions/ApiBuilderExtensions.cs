@@ -47,5 +47,10 @@ namespace Gerenciador.Credito.Api.Extensions
         {
             builder.Services.AddHealthChecks().AddDbContextCheck<CreditoDbContext>();
         }
+
+        public static void AddMessagingConfiguration(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddSingleton<IMessagePublisher, KafkaPublisher>();
+        }
     }
 }

@@ -3,16 +3,18 @@
 public class CreditoEntity
 {
     public long Id { get; set; }
-    public string NumeroCredito { get; private set; }
-    public string NumeroNfse { get; private set; }
+    public string NumeroCredito { get; private set; } = string.Empty;
+    public string NumeroNfse { get; private set; } = string.Empty;
     public DateTime DataConstituicao { get; private set; }
     public decimal ValorIssqn { get; private set; }
-    public string TipoCredito { get; private set; }
+    public string TipoCredito { get; private set; } = string.Empty;
     public bool SimplesNacional { get; private set; }
     public decimal Aliquota { get; private set; }
     public decimal ValorFaturado { get; private set; }
     public decimal ValorDeducao { get; private set; }
     public decimal BaseCalculo { get; private set; }
+
+    public CreditoEntity() { }
 
     public CreditoEntity(string numeroCredito, string numeroNfse, DateTime data,
     decimal valorIssqn, string tipoCredito, bool simples,
