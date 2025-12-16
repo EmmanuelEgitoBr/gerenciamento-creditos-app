@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gerenciador.Credito.Domain\Gerenciador.Credito.Domain.csproj" />
+    <ProjectReference Include="..\Gerenciador.Credito.Messaging\Gerenciador.Credito.Messaging.csproj" />
   </ItemGroup>
 
 </Project>

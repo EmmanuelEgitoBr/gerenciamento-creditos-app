@@ -1,5 +1,5 @@
-using Gerenciador.Credito.Domain.Entities;
 using Gerenciador.Credito.Domain.Interfaces;
+using Gerenciador.Credito.Messaging.KafkaMessage.Interfaces;
 
 namespace Gerenciador.Credito.Worker
 {
@@ -7,25 +7,23 @@ namespace Gerenciador.Credito.Worker
     {
         private readonly ILogger<Worker> _logger;
         private readonly IServiceScopeFactory _scopeFactory;
-        //private readonly IMessageConsumer _consumer;
+        private readonly IMessageConsumer _consumer;
 
         public Worker(ILogger<Worker> logger
             ,IServiceScopeFactory scopeFactory
-            //,IMessageConsumer consumer
+            ,IMessageConsumer consumer
             )
         {
             _logger = logger;
             _scopeFactory = scopeFactory;
-            //_consumer = consumer;
+            _consumer = consumer;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                var credito = new CreditoEntity();
-
-                //var credito = await _consumer.ConsumeAsync();
+                var credito = await _consumer.ConsumeAsync();
 
                 if (credito != null)
                 {

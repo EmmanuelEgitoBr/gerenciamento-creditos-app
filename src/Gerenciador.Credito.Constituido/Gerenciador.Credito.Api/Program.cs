@@ -13,6 +13,7 @@ builder.AddMediatRConfiguration();
 builder.AddFluentValidationConfiguration();
 builder.AddRepositoriesConfiguration();
 builder.AddHealthChecksConfiguration();
+builder.AddMessagingConfiguration();
 
 var app = builder.Build();
 

@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Gerenciador.Credito.Application\Gerenciador.Credito.Application.csproj" />
     <ProjectReference Include="..\Gerenciador.Credito.Infrastructure\Gerenciador.Credito.Infrastructure.csproj" />
+    <ProjectReference Include="..\Gerenciador.Credito.Messaging\Gerenciador.Credito.Messaging.csproj" />
   </ItemGroup>
 
 </Project>

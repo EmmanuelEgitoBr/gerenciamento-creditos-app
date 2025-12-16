@@ -4,6 +4,8 @@ using Gerenciador.Credito.Application.Commands.IntegrarCredito;
 using Gerenciador.Credito.Domain.Interfaces;
 using Gerenciador.Credito.Infrastructure.Context;
 using Gerenciador.Credito.Infrastructure.Repositories;
+using Gerenciador.Credito.Messaging.KafkaMessage;
+using Gerenciador.Credito.Messaging.KafkaMessage.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Gerenciador.Credito.Api.Extensions
@@ -50,7 +52,7 @@ namespace Gerenciador.Credito.Api.Extensions
 
         public static void AddMessagingConfiguration(this WebApplicationBuilder builder)
         {
-            //builder.Services.AddSingleton<IMessagePublisher, KafkaPublisher>();
+            builder.Services.AddSingleton<IMessagePublisher, KafkaPublisher>();
         }
     }
 }

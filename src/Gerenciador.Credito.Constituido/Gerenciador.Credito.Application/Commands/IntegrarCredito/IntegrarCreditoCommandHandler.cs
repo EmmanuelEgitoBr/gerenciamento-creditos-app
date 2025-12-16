@@ -1,6 +1,7 @@
 ﻿using Gerenciador.Credito.Application.Models.Commands;
 using Gerenciador.Credito.Domain.Entities;
 using Gerenciador.Credito.Domain.Interfaces;
+using Gerenciador.Credito.Messaging.KafkaMessage.Interfaces;
 using MediatR;
 using System.Net;
 
@@ -9,14 +10,14 @@ namespace Gerenciador.Credito.Application.Commands.IntegrarCredito
     public class IntegrarCreditoCommandHandler : IRequestHandler<IntegrarCreditoCommand, IntegrarCreditoCommandResult>
     {
         private readonly ICreditoRepository _creditoRepository;
-        //private readonly IMessagePublisher _publisher;
+        private readonly IMessagePublisher _publisher;
 
         public IntegrarCreditoCommandHandler(ICreditoRepository creditoRepository
-            //,IMessagePublisher publisher
+            ,IMessagePublisher publisher
             )
         {
             _creditoRepository = creditoRepository;
-            //_publisher = publisher;
+            _publisher = publisher;
         }
 
         public async Task<IntegrarCreditoCommandResult> Handle(IntegrarCreditoCommand request, CancellationToken cancellationToken)
@@ -39,9 +40,10 @@ namespace Gerenciador.Credito.Application.Commands.IntegrarCredito
                         credito.ValorFaturado,
                         credito.ValorDeducao,
                         credito.BaseCalculo);
+
+                    await _publisher.PublishAsync<CreditoEntity>("integrar-credito-constituido-entry", novoCredito);
+                    quantidadeNovosRegistros++;
                 }
-                //await _publisher.PublishAsync("integrar-credito-constituido-entry", novoCredito);
-                quantidadeNovosRegistros++;
             }
 
             if (quantidadeNovosRegistros > 0)
