@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Gerenciador.Credito.Application\Gerenciador.Credito.Application.csproj" />
     <ProjectReference Include="..\Gerenciador.Credito.Infrastructure\Gerenciador.Credito.Infrastructure.csproj" />
   </ItemGroup>
 

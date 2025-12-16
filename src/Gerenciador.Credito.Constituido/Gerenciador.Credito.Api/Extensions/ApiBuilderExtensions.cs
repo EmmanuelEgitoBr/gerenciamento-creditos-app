@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
+using Gerenciador.Credito.Application.Commands.IntegrarCredito;
 using Gerenciador.Credito.Domain.Interfaces;
 using Gerenciador.Credito.Infrastructure.Context;
 using Gerenciador.Credito.Infrastructure.Repositories;
@@ -27,18 +28,14 @@ namespace Gerenciador.Credito.Api.Extensions
         {
             builder.Services.AddMediatR(cfg =>
             {
-                //cfg.RegisterServicesFromAssemblyContaining<Gerenciador.Credito.Application.AssembliesMarker>();
+                cfg.RegisterServicesFromAssembly(typeof(IntegrarCreditoCommand).Assembly);
             });
-            //builder.Services.AddMediatR(cfg =>
-            //{
-            //    cfg.RegisterServicesFromAssembly(typeof(IntegrarCreditoCommand).Assembly);
-            //});
         }
 
         public static void AddFluentValidationConfiguration(this WebApplicationBuilder builder)
         {
             builder.Services.AddFluentValidationAutoValidation();
-            //builder.Services.AddValidatorsFromAssembly(typeof(IntegrarCreditoValidator).Assembly);
+            builder.Services.AddValidatorsFromAssembly(typeof(IntegrarCreditoCommandValidator).Assembly);
         }
 
         public static void AddRepositoriesConfiguration(this WebApplicationBuilder builder)
