@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Gerenciador.Credito.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Entidade = Gerenciador.Credito.Domain.Entities;
 
 namespace Gerenciador.Credito.Infrastructure.EntityConfiguration
 {
-    public class CreditoConfiguration : IEntityTypeConfiguration<Entidade.Credito>
+    public class CreditoConfiguration : IEntityTypeConfiguration<CreditoEntity>
     {
-        public void Configure(EntityTypeBuilder<Entidade.Credito> builder)
+        public void Configure(EntityTypeBuilder<CreditoEntity> builder)
         {
             builder.ToTable("credito");
 

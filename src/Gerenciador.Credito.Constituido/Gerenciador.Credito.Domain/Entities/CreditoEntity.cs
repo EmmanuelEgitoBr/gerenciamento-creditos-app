@@ -1,6 +1,6 @@
 ﻿namespace Gerenciador.Credito.Domain.Entities;
 
-public class Credito
+public class CreditoEntity
 {
     public long Id { get; set; }
     public string NumeroCredito { get; private set; }
@@ -14,7 +14,7 @@ public class Credito
     public decimal ValorDeducao { get; private set; }
     public decimal BaseCalculo { get; private set; }
 
-    public Credito(string numeroCredito, string numeroNfse, DateTime data,
+    public CreditoEntity(string numeroCredito, string numeroNfse, DateTime data,
     decimal valorIssqn, string tipoCredito, bool simples,
     decimal aliquota, decimal faturado, decimal deducao, decimal baseCalculo)
     {

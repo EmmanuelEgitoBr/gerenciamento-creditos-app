@@ -1,12 +1,12 @@
-﻿using Gerenciador.Credito.Infrastructure.EntityConfiguration;
+﻿using Gerenciador.Credito.Domain.Entities;
+using Gerenciador.Credito.Infrastructure.EntityConfiguration;
 using Microsoft.EntityFrameworkCore;
-using Entidade = Gerenciador.Credito.Domain.Entities;
 
 namespace Gerenciador.Credito.Infrastructure.Context;
 
 public class CreditoDbContext : DbContext
 {
-    public DbSet<Entidade.Credito> Creditos => Set<Entidade.Credito>();
+    public DbSet<CreditoEntity> Creditos => Set<CreditoEntity>();
 
 
     public CreditoDbContext(DbContextOptions<CreditoDbContext> options)
