@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gerenciador.Credito.Messaging", "Gerenciador.Credito.Messaging\Gerenciador.Credito.Messaging.csproj", "{90572FBD-23A5-43D7-BFA6-3927A7CCB72C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gerenciador.Credito.UnitTests", "Gerenciador.Credito.UnitTests\Gerenciador.Credito.UnitTests.csproj", "{C8917CEB-01BA-4A6A-907F-912282C94E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{90572FBD-23A5-43D7-BFA6-3927A7CCB72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90572FBD-23A5-43D7-BFA6-3927A7CCB72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90572FBD-23A5-43D7-BFA6-3927A7CCB72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8917CEB-01BA-4A6A-907F-912282C94E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8917CEB-01BA-4A6A-907F-912282C94E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8917CEB-01BA-4A6A-907F-912282C94E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8917CEB-01BA-4A6A-907F-912282C94E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{6ED789F8-4E17-4299-BB52-04EAABB4BE47} = {5E2D85DD-2798-4B50-8B8D-4156A18987C9}
 		{BB31E9D9-021E-48C0-B9E9-8952AF44F48D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{90572FBD-23A5-43D7-BFA6-3927A7CCB72C} = {9697968E-18D0-4DFC-8B14-0CE1474102C6}
+		{C8917CEB-01BA-4A6A-907F-912282C94E0B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F3E56FA-1F33-47F2-9FDC-EF5B93D46AE5}
